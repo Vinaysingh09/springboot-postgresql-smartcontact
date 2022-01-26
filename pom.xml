@@ -14,9 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>smart_contact_manager</name>
 	<description>create smart contact manager appliaction</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+ 
 	<dependencies>
 
 		<dependency>
