@@ -1,7 +1,7 @@
 package com.scma.anilg.configure;
 
-import java.util.Collection;
-import java.util.List;
+ 
+import java.util.*;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -21,7 +21,7 @@ public class UserDetailsImpl implements UserDetails {
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(user.getRole());
-		return List.of(simpleGrantedAuthority);
+		return Arrays.asList(simpleGrantedAuthority);
 	}
 
 	@Override
