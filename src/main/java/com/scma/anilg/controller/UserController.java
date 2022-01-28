@@ -114,7 +114,7 @@ public class UserController {
 				originalFilename = currDateTime+"@"+mpFile.getOriginalFilename();
 			}	
 				/** retrieve current class-path resource folder relative path */
-				 				 File savedFile = new ClassPathResource("classes/static/image").getFile();
+				 				 File savedFile = new ClassPathResource("target/classes/static/image/").getFile();
 			 
 				 destPath = Paths.get(savedFile.getAbsolutePath()+File.separator+originalFilename);
 				 System.out.println("Image path :"+destPath);
