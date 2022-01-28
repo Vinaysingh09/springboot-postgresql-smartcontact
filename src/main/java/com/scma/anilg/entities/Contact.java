@@ -37,7 +37,7 @@ public class Contact {
 	private String phone;
 	
 	@NotBlank(message = "Description must not be blank")
-	@Column(length = 5000)
+	@Column(length = 250)
 	//@Size(min = 3, message = "description must be min 3 letters")
 	private String description;
 	
