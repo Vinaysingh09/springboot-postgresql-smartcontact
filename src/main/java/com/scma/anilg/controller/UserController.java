@@ -114,13 +114,10 @@ public class UserController {
 				originalFilename = currDateTime+"@"+mpFile.getOriginalFilename();
 			}	
 				/** retrieve current class-path resource folder relative path */
-				 String savedFile = "target/classes/static/image/";
+				 				 File savedFile = new ClassPathResource("classes/static/image").getFile();
 			 
-				 destPath = Paths.get(savedFile+File.separator+originalFilename);
-				  if (!Files.exists(destPath)) {
-			            Files.createDirectories(destPath);
-			        }
-// 				   Path filePath = destPath.resolve(originalFilename);
+				 destPath = Paths.get(savedFile.getAbsolutePath()+File.separator+originalFilename);
+				 System.out.println("Image path :"+destPath);
 				 
 				contact.setImage(originalFilename);
 			
