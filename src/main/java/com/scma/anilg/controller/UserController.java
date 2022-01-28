@@ -117,10 +117,10 @@ public class UserController {
 				 String savedFile = "src/main/resources/static/image/";
 			 
 				 destPath = Paths.get(savedFile+File.separator+originalFilename);
-				  if (!Files.exists(destPath)) {
-			            Files.createDirectories(destPath);
-			        }
-				   Path filePath = destPath.resolve(originalFilename);
+// 				  if (!Files.exists(destPath)) {
+// 			            Files.createDirectories(destPath);
+// 			        }
+// 				   Path filePath = destPath.resolve(originalFilename);
 				 
 				contact.setImage(originalFilename);
 			
@@ -136,7 +136,7 @@ public class UserController {
 		if(addedContactResult !=null) {
 			
 			/** Now actual storing image into given path, when first Registered this file path location into DB then now*/
-			Files.copy(mpFile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(mpFile.getInputStream(), destPath, StandardCopyOption.REPLACE_EXISTING);
 			System.out.println("After successful contact added : "+addedContactResult);
 		}
 		
