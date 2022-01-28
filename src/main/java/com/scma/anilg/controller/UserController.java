@@ -149,7 +149,7 @@ public class UserController {
 			model.addAttribute("contact", contact);
 
 			/** failure message alert */
-			session.setAttribute("message", new Message("Something goes wrong, please try again.....!!", "danger"));
+			session.setAttribute("message", new Message("Wrong "+e.getMessage(), "danger"));
 			return "user/add_contact_form";
 		}
 
